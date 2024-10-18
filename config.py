@@ -7,21 +7,22 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = "27018175"
-API_HASH = "9726271ce98f126cebea0d4758edc88d"
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = "6823089678:AAGg4ObgffxnA9ysxW2PXxVYrZRi3fiOOQo"
+BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = "mongodb+srv://chomuchot:marin@akuma.6zp9apt.mongodb.net/?retryWrites=true&w=majority&appName=Akuma"
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = "-1001985818611"
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", None))
+
 # Get this value from @MissRose_Bot on Telegram by /id
-OWNER_ID = "5161733380"
+OWNER_ID = int(getenv("OWNER_ID", None))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -31,7 +32,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Chomuchot/AviaxMusic",
+    "https://github.com/CyberPixelPro/AviaxMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -64,7 +65,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 2145386496))
 
 
 # Get your pyrogram v2 session from Replit
-STRING1 = "BQGcQ78AwtxbVkJcxIcu5u3EfjO5HdCkOzJlSxLWdr5hffuQunCSx4XQlFvYkTR_-aEydKbn5CVasEzrexjLVxPv0hvcRBjCSkFimxQYpbnKGENLGltb5tcOfzfFWDnP7CsjQhQ42Ydf_frBgDjzwhHfQWSaN-dqfC6Fvz5bsdRbb6vplXs-KaS-a0fXkx6qnpAjps3v4XFALukHiYi70jeoIt57gT5o0pkPalcl7rLW4cItquRJVTxwoQ0qN3f4SHSSEciAh2HGzSqaffpE8gy2lPPjAvu62hwvQ9Y5fgdJW6ZJJ-cJzvmVmNRwvqtmlnSfYi8P3jAsXRUdBwBx42EW1OLAAAAAHT4YAA"
+STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
